@@ -1,0 +1,49 @@
+require: rubocop-performance
+
+inherit_gem:
+  rubocop-rails_config:
+    - config/rails.yml
+
+AllCops:
+  TargetRubyVersion: 2.5
+
+  Exclude:
+    - 'app/views/**/*'
+    - 'bin/*'
+    - 'db/schema.rb'
+    - 'db/migrate/*'
+    - 'log/**/*'
+    - 'node_modules/**/*'
+    - 'public/**/*'
+    - 'scripts/**/*'
+    - 'vendor/**/*'
+    - 'tmp/**/*'
+    - '.git/**/*'
+    - 'config/**/*'
+    - 'Gemfile'
+    - 'config.ru'
+    - 'Rakefile'
+
+Documentation:
+  Enabled: false
+
+IndentationConsistency:
+  EnforcedStyle: 'rails'
+
+Metrics/BlockLength:
+  Exclude:
+    - 'Guardfile'
+
+Naming/FileName:
+  Exclude:
+    - 'Gemfile'
+    - 'Guardfile'
+    - 'Rakefile'
+
+Rails:
+  Enabled: true
+
+StringLiterals:
+  EnforcedStyle: single_quotes
+  Exclude:
+    - './*_helper.rb'
