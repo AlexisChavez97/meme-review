@@ -15,5 +15,7 @@
 class User < ApplicationRecord
   has_many :memes
 
+  has_many :posts
+
   validates :name, :email, presence: true
 end
