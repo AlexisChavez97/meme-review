@@ -1,0 +1,16 @@
+# == Schema Information
+#
+# Table name: posts
+#
+#  id         :bigint(8)        not null, primary key
+#  title      :string           not null
+#  user_id    :bigint(8)
+#  meme_id    :bigint(8)
+#  created_at :datetime         not null
+#  updated_at :datetime         not null
+#
+
+dank_post:
+  title: dank
+  user: admin
+  meme: dank_meme

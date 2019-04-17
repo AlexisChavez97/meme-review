@@ -4,11 +4,12 @@
 #
 # Table name: memes
 #
-#  id         :bigint(8)        not null, primary key
-#  users_id   :bigint(8)
-#  caption    :string
-#  created_at :datetime         not null
-#  updated_at :datetime         not null
+#  id          :bigint(8)        not null, primary key
+#  user_id     :bigint(8)
+#  name        :string
+#  description :string
+#  created_at  :datetime         not null
+#  updated_at  :datetime         not null
 #
 
 class MemeTest < ActiveSupport::TestCase
@@ -18,7 +19,8 @@ class MemeTest < ActiveSupport::TestCase
   end
 
   test 'can attach image to meme' do
-    @subject.caption = 'meme review'
+    @subject.name = 'big chungus'
+    @subject.description = 'meme review'
     @subject.image.attach(io: File.open(file_fixture('joji.jpeg')), filename: 'joji.jpeg')
 
     assert @subject.image.attached?

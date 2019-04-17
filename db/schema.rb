@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_05_184620) do
+ActiveRecord::Schema.define(version: 2019_04_12_193343) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -38,10 +38,22 @@ ActiveRecord::Schema.define(version: 2019_04_05_184620) do
 
   create_table "memes", force: :cascade do |t|
     t.bigint "user_id"
-    t.string "caption"
+    t.string "name"
+    t.string "description"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.index ["user_id"], name: "index_memes_on_user_id"
+  end
+
+  create_table "posts", force: :cascade do |t|
+    t.string "title", null: false
+    t.bigint "user_id"
+    t.bigint "meme_id"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["meme_id"], name: "index_posts_on_meme_id"
+    t.index ["title"], name: "index_posts_on_title", unique: true
+    t.index ["user_id"], name: "index_posts_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
