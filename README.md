@@ -1,24 +1,39 @@
-# README
+# Crowdfunding
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Crowdfunding is used for management crowdfunds (funds campaigns) that works with any Ruby Applications also it's an extension of Creditar.io
 
-Things you may want to cover:
+## System requeriments
 
-* Ruby version
+- Ruby 2.5.1
+- Ruby on Rails 6.0.0.beta3
+- [Yarn](https://yarnpkg.com/en/docs/install#mac-stable)
+- Node v8.10.0
 
-* System dependencies
+## Get started
 
-* Configuration
+Execute
 
-* Database creation
+    $ yarn
 
-* Database initialization
+And then execute:
 
-* How to run the test suite
+    $ bundle install
 
-* Services (job queues, cache servers, search engines, etc.)
+Database:
 
-* Deployment instructions
+    $ bin/rails db:create
+    $ bin/rails db:migrate
 
-* ...
+Tests:
+
+    bin/rails test
+
+Rubocop:
+
+    bundle exec rubocop
+
+Start server:
+
+    bin/rails s
+
+    bin/webpack-dev-server

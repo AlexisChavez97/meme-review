@@ -3,6 +3,7 @@
 // a relevant structure within app/javascript and only use these pack files to reference
 // that code so it'll be compiled.
 
+import '../images/meme-review-logo.jpg'
 import 'stylesheets/styles'
 require("@rails/ujs").start()
 require("turbolinks").start()

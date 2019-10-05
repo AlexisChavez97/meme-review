@@ -1,1 +1,12 @@
 @import '~bulma/bulma';
+
+.header {
+  height: 30%;
+  width: 100%;
+  display: flex;
+  margin: 0 auto
+}
+
+.container.landing {
+  width: 95%;
+}
