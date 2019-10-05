@@ -1,6 +1,4 @@
-# Crowdfunding
-
-Crowdfunding is used for management crowdfunds (funds campaigns) that works with any Ruby Applications also it's an extension of Creditar.io
+# Meme Review
 
 ## System requeriments
 
@@ -13,16 +11,16 @@ Crowdfunding is used for management crowdfunds (funds campaigns) that works with
 
 Execute
 
-    $ yarn
+    yarn
 
 And then execute:
 
-    $ bundle install
+    bundle install
 
 Database:
 
-    $ bin/rails db:create
-    $ bin/rails db:migrate
+    bin/rails db:create
+    bin/rails db:migrate
 
 Tests:
 
