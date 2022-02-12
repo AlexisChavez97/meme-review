@@ -125,7 +125,8 @@ GEM
       method_source (~> 0.9.0)
     psych (3.1.0)
     public_suffix (3.0.3)
-    puma (3.12.1)
+    puma (4.3.11)
+      nio4r (~> 2.0)
     rack (2.0.7)
     rack-proxy (0.6.5)
       rack
@@ -243,7 +244,7 @@ DEPENDENCIES
   listen (>= 3.0.5, < 3.2)
   pg (>= 0.18, < 2.0)
   pry
-  puma (~> 3.11)
+  puma (~> 4.3)
   rails (~> 6.0.0.beta2)
   rubocop-performance
   rubocop-rails_config
